@@ -3,7 +3,7 @@
 // Creare una funzione per capire se la parola inserita è palindroma
 
 // richiesta parola
-const word = prompt("Inserisci una parola");
+let word = prompt("Inserisci una parola");
 
 // divisione in lettere (array)
 let letters = word.split('');
@@ -20,9 +20,35 @@ let wordReverse = letters.join('');
 let risultato;
 
 if (word == wordReverse) {
-    risultato = "La parola è palindroma!"
+    result = "La parola è palindroma!"
 } else {
-    risultato = "La parola non è palindroma."
+    result = "La parola non è palindroma."
 }
 
-console.log(risultato);
+// output
+console.log(result);
+document.getElementById("risultato").innerHTML = result;
+
+
+// CON FUNZIONE
+// richiesta parola
+word = prompt("Inserisci una parola");
+
+// inversione
+wordReverse = reverse(word);
+
+// verifica condizione
+if (word == wordReverse) {
+    resultTwo = "La seconda parola è palindroma!"
+} else {
+    resultTwo = "La seconda parola non è palindroma."
+}
+
+// funzione
+function reverse(word) {
+    wordReverse = word.split('').reverse().join('');
+    return wordReverse;
+}
+
+// output
+document.getElementById("risultato2").innerHTML = resultTwo
