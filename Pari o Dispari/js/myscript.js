@@ -7,30 +7,34 @@
 let pODUser = prompt("Pari o Dispari?");
 const numbUser = parseInt(prompt("Scegli un numero da 1 a 5."));
 
+console.log(pODUser);
+
 // generazione numero PC
 const numbPc = Math.floor (Math.random() * 5) + 1;
 console.log(parseInt(numbPc));
 
 // somma dei numeri
-const sum = numbUser + numbPc
+const sum = numbUser + numbPc;
 
 // condizione P o D
 let result;
 
-if (sum % 2 == 0) {
+if (sum % 2 === 0) {
     result = "Pari"    
 } else {
     result = "Dispari"
 }
 
 // verifica risultato
-let game;
+let game = "";
 
-if (pODUser = result) {
+if (pODUser == result) {
     game = "You Win!"
 } else {
     game = "You Lose."
 }
+
+console.log(game);
 
 // output
 document.getElementById("game").innerHTML = game;
